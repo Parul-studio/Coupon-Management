@@ -36,7 +36,7 @@ How to Run
 
 ### Setup Steps
 1. Clone the repository:
-```bash
+
 git clone <your-repo-link>
 cd coupon-management
 
