@@ -25,3 +25,32 @@ Framework: FastAPI (for building APIs)
 Data Validation: Pydantic
 
 Server: Uvicorn (ASGI server to run FastAPI)
+
+How to Run
+
+## How to Run
+
+### Prerequisites
+- Python 3.14 installed
+- pip available
+
+### Setup Steps
+1. Clone the repository:
+```bash
+git clone <your-repo-link>
+cd coupon-management
+
+Install dependencies:
+pip install fastapi uvicorn pydantic
+
+Start the Service
+uvicorn main:app --reload
+Open your browser: http://127.0.0.1:8000/docs
+
+Test the endpoints:
+
+  .POST /create-coupon → To create coupons
+
+. .GET /coupons → To list all coupons
+
+  .POST /best-coupon → To get the best applicable coupon
