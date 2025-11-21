@@ -51,6 +51,50 @@ Test the endpoints:
 
   .POST /create-coupon → To create coupons
 
-. .GET /coupons → To list all coupons
+  .GET /coupons → To list all coupons
 
   .POST /best-coupon → To get the best applicable coupon
+
+ How to Run Tests
+ # Navigate to project folder
+cd coupon-management
+
+# Run all tests
+pytest
+Output will show test results (pass/fail) and any errors.
+
+You can also use pytest -v for detailed output.
+
+AI Usage Note
+
+AI (ChatGPT) was used only for guidance:
+
+Planning project structure
+
+Designing APIs
+
+Understanding eligibility rules
+
+Creating README content
+
+Example prompts used:
+
+“Help me design a coupon management system API in FastAPI”
+
+“Generate sample README for a coupon management project”
+
+“Explain best coupon selection logic in a coupon system”
+
+Additional Notes
+
+Uses in-memory storage; no real database required.
+
+Best coupon selection logic:
+
+Highest discount → Earliest expiry → Lexicographically smallest code (if tie occurs)
+
+Optional eligibility attributes are ignored if not provided.
+
+Hard-coded demo login user
+Email: hire-me@anshumat.org
+Password: HireMe@2025!
