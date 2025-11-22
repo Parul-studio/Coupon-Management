@@ -1,5 +1,5 @@
 ## **Coupon Management System**
-Project Overview
+# **Project Overview**
 
 This project is a Simple Coupon Management System built for an e-commerce use case.
 It supports:
@@ -22,100 +22,99 @@ Allowed / excluded categories
 
 Minimum item count
 
-Example:
+**Example:**
 If the user is placing their first order and the cart contains electronics + fashion items, the system selects the best applicable coupon.
 
-Tech Stack
+# **Tech Stack**
 
-Language: Python 3.14
+**.**Language: Python 3.14
 
-Framework: FastAPI
+**.**Framework: FastAPI
 
-Data Validation: Pydantic
+**.**Data Validation: Pydantic
 
-Server: Uvicorn (ASGI server)
+**.**Server: Uvicorn (ASGI server)
 
-How to Run
-Prerequisites
+# **How to Run**
+**Prerequisites**
 
 Python 3.14 installed
 
 pip available
 
-Setup Steps
-1. Clone the repository
+# **Setup Steps**
+**1. Clone the repository**
 git clone <your-repo-url>
 cd coupon-management
 
-2. Install dependencies
+**2. Install dependencies**
 pip install fastapi uvicorn pydantic
 
-3. Start the service
+**3. Start the service**
 uvicorn main:app --reload
 
-4. Open API Docs
+**4. Open API Docs**
 
 Open browser:
 
 http://127.0.0.1:8000/docs
 
-Available Endpoints
+# **Available Endpoints**
 
-POST /create-coupon → Create a new coupon
+**.**POST /create-coupon → Create a new coupon
 
-GET /coupons → List all stored coupons
+**.**GET /coupons → List all stored coupons
 
-POST /best-coupon → Returns the best applicable coupon
+**.**POST /best-coupon → Returns the best applicable coupon
 
-How to Run Tests
+# **How to Run Tests**
 
-(Only if you added pytest tests)
 
-1. Navigate to project folder
+**1. Navigate to project folder**
 cd coupon-management
 
-2. Run all tests
+**2. Run all tests**
 pytest
 
-3. For detailed output
+**3. For detailed output**
 pytest -v
 
 AI Usage Note
 
-AI (ChatGPT) was used only for guidance in:
+# **AI (ChatGPT) was used only for guidance in:**
 
-Planning the project structure
+**.**Planning the project structure
 
-Designing APIs
+**.**Designing APIs
 
-Understanding eligibility rules
+**.**Understanding eligibility rules
 
-Writing README content
+**.**Writing README content
 
-Example prompts used
+**Example prompts used**
 
-“Help me design a coupon management system API in FastAPI”
+**.**“Help me design a coupon management system API in FastAPI”
 
-“Generate sample README for a coupon management project”
+**.**“Generate sample README for a coupon management project”
 
-“Explain best coupon selection logic in a coupon system”
+**.**“Explain best coupon selection logic in a coupon system”
 
-Additional Notes
+# **Additional Notes**
 
-Uses in-memory storage (no real database)
+**.**Uses in-memory storage (no real database)
 
-Best coupon selection logic:
+**.**Best coupon selection logic:
 
-Highest discount
+**1.**Highest discount
 
-Earliest expiry
+**2.**Earliest expiry
 
-Lexicographically smallest code (if tie)
+**3.**Lexicographically smallest code (if tie)
 
-Optional eligibility attributes are ignored if not provided
+**.**Optional eligibility attributes are ignored if not provided
 
-Required demo login (must exist in deployed version):
+**.**Required demo login (must exist in deployed version):
 
-Email: hire-me@anshumat.org
+**.**Email: hire-me@anshumat.org
 
-Password: HireMe@2025!
+**.**Password: HireMe@2025!
