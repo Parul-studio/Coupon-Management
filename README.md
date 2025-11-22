@@ -25,34 +25,46 @@ ________________________________________
 •	Server: Uvicorn (ASGI server)
 ________________________________________
 **How to Run**
+
 Prerequisites
+
 •	Python 3.14 installed
+
 •	pip available
 ________________________________________
 **Setup Steps**
+
 1. Clone the repository
 git clone <your-repo-url>
 cd coupon-management
-2. Install dependencies
+
+3. Install dependencies
 pip install fastapi uvicorn pydantic
-3. Start the service
+
+5. Start the service
 uvicorn main:app --reload
-4. Open API Docs
+
+7. Open API Docs
 Open browser:
 http://127.0.0.1:8000/docs
 ________________________________________
 **Available Endpoints**
+
 •	POST /create-coupon → Create a new coupon
+
 •	GET /coupons → List all stored coupons
+
 •	POST /best-coupon → Returns the best applicable coupon
 ________________________________________
 **How to Run Tests**
 
 1. Navigate to project folder
 cd coupon-management
-2. Run all tests
+
+3. Run all tests
 pytest
-3. For detailed output
+
+4. For detailed output
 pytest -v
 ________________________________________
 **AI Usage Note**
