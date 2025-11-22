@@ -44,13 +44,16 @@ pip available
 
 # **Setup Steps**
 **1. Clone the repository**
+
 git clone <your-repo-url>
 cd coupon-management
 
 **2. Install dependencies**
+
 pip install fastapi uvicorn pydantic
 
 **3. Start the service**
+
 uvicorn main:app --reload
 
 **4. Open API Docs**
