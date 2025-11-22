@@ -98,7 +98,7 @@ ________________________________________
 2.	Earliest expiry
    
 3.	Lexicographically smallest code
-4.	
+   
 •	Optional eligibility attributes are ignored if not provided
 
 •	Required demo login (must exist in deployed version):
