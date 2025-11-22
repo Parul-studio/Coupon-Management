@@ -15,9 +15,13 @@ Example:
 If the user is placing their first order and the cart contains electronics + fashion items, the system selects the best applicable coupon.
 ________________________________________
 **Tech Stack**
+
 •	Language: Python 3.14
+
 •	Framework: FastAPI
+
 •	Data Validation: Pydantic
+
 •	Server: Uvicorn (ASGI server)
 ________________________________________
 **How to Run**
