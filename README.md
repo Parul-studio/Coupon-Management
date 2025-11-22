@@ -1,83 +1,98 @@
-# Coupon-Management
-Coupon Management System for e-commerce assignment
+Coupon Management System
 Project Overview
 
-This project is a Simple Coupon Management System for an e-commerce use case.
+This project is a Simple Coupon Management System built for an e-commerce use case.
+It supports:
 
-. Allows creating coupons with various eligibility rules.
+Creating coupons with multiple eligibility rules
 
-. Provides an API to return the best coupon for a given user and cart input.
+Returning the best coupon for a given user + cart
 
-. Uses in-memory storage (no database required for this assignment).
+In-memory storage (no database needed)
 
-. Supports FLAT and PERCENT discount types with optional maximum discount limit.
+FLAT and PERCENT discounts with optional maximum discount limits
 
-. Eligibility rules include: first order only, minimum cart value, allowed categories, excluded categories, minimum item count.
+Eligibility rules such as:
 
-Example: If a user is placing their first order and the cart contains electronics and fashion items, the system will return the best applicable coupon.
+First order only
+
+Minimum cart value
+
+Allowed / excluded categories
+
+Minimum item count
+
+Example:
+If the user is placing their first order and the cart contains electronics + fashion items, the system selects the best applicable coupon.
 
 Tech Stack
 
 Language: Python 3.14
 
-Framework: FastAPI (for building APIs)
+Framework: FastAPI
 
 Data Validation: Pydantic
 
-Server: Uvicorn (ASGI server to run FastAPI)
+Server: Uvicorn (ASGI server)
 
 How to Run
+Prerequisites
 
-## How to Run
+Python 3.14 installed
 
-### Prerequisites
-- Python 3.14 installed
-- pip available
+pip available
 
-### Setup Steps
-1. Clone the repository:
-
-git clone <your-repo-link>
+Setup Steps
+1. Clone the repository
+git clone <your-repo-url>
 cd coupon-management
 
-Install dependencies:
+2. Install dependencies
 pip install fastapi uvicorn pydantic
 
-Start the Service
+3. Start the service
 uvicorn main:app --reload
-Open your browser: http://127.0.0.1:8000/docs
 
-Test the endpoints:
+4. Open API Docs
 
-  .POST /create-coupon → To create coupons
+Open browser:
 
-  .GET /coupons → To list all coupons
+http://127.0.0.1:8000/docs
 
-  .POST /best-coupon → To get the best applicable coupon
+Available Endpoints
 
- How to Run Tests
- # Navigate to project folder
+POST /create-coupon → Create a new coupon
+
+GET /coupons → List all stored coupons
+
+POST /best-coupon → Returns the best applicable coupon
+
+How to Run Tests
+
+(Only if you added pytest tests)
+
+1. Navigate to project folder
 cd coupon-management
 
-# Run all tests
+2. Run all tests
 pytest
-Output will show test results (pass/fail) and any errors.
 
-You can also use pytest -v for detailed output.
+3. For detailed output
+pytest -v
 
 AI Usage Note
 
-AI (ChatGPT) was used only for guidance:
+AI (ChatGPT) was used only for guidance in:
 
-Planning project structure
+Planning the project structure
 
 Designing APIs
 
 Understanding eligibility rules
 
-Creating README content
+Writing README content
 
-Example prompts used:
+Example prompts used
 
 “Help me design a coupon management system API in FastAPI”
 
@@ -87,14 +102,20 @@ Example prompts used:
 
 Additional Notes
 
-Uses in-memory storage; no real database required.
+Uses in-memory storage (no real database)
 
 Best coupon selection logic:
 
-Highest discount → Earliest expiry → Lexicographically smallest code (if tie occurs)
+Highest discount
 
-Optional eligibility attributes are ignored if not provided.
+Earliest expiry
 
-Hard-coded demo login user
+Lexicographically smallest code (if tie)
+
+Optional eligibility attributes are ignored if not provided
+
+Required demo login (must exist in deployed version):
+
 Email: hire-me@anshumat.org
+
 Password: HireMe@2025!
