@@ -1,4 +1,4 @@
-Coupon Management System
+##**Coupon Management System**
 Project Overview
 
 This project is a Simple Coupon Management System built for an e-commerce use case.
