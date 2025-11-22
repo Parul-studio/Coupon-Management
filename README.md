@@ -68,25 +68,43 @@ pytest
 pytest -v
 ________________________________________
 **AI Usage Note**
+
 AI (ChatGPT) was used only for guidance in:
+
 •	Planning the project structure
+
 •	Designing APIs
+
 •	Understanding eligibility rules
+
 •	Writing README content
+
 **Example prompts used**
+
 •	“Help me design a coupon management system API in FastAPI”
+
 •	“Generate sample README for a coupon management project”
+
 •	“Explain best coupon selection logic in a coupon system”
 ________________________________________
 **Additional Notes**
+
 •	Uses in-memory storage (no real database)
+
 •	Best coupon selection logic:
+
 1.	Highest discount
+   
 2.	Earliest expiry
-3.	Lexicographically smallest code (if tie)
+   
+3.	Lexicographically smallest code
+4.	
 •	Optional eligibility attributes are ignored if not provided
+
 •	Required demo login (must exist in deployed version):
+
 o	Email: hire-me@anshumat.org
+
 o	Password: HireMe@2025!
 
 
