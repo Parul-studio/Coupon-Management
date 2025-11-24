@@ -156,16 +156,14 @@ GET /coupons/best
 ## 📸 Screenshots
 
 ### ▶ Swagger UI
-(Add your swagger screenshot here)
-```
+
 ![Swagger Screenshot](images/swagger.png)
-```
+
 
 ### ▶ SQLite Database Table
-(Add your DB screenshot here)
-```
+
 ![Database Screenshot](images/database.png)
-```
+
 
 ---
 
