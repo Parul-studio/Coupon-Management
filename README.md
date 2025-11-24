@@ -1,110 +1,196 @@
-### Coupon Management System
-**Project Overview**
-This project is a Simple Coupon Management System built for an e-commerce use case.
-**It supports:**
-•	Creating coupons with multiple eligibility rules
-•	Returning the best coupon for a given user + cart
-•	In-memory storage (no database needed)
-•	FLAT and PERCENT discounts with optional maximum discount limits
-•	Eligibility rules such as:
-o	First order only
-o	Minimum cart value
-o	Allowed / excluded categories
-o	Minimum item count
-Example:
-If the user is placing their first order and the cart contains electronics + fashion items, the system selects the best applicable coupon.
-________________________________________
-**Tech Stack**
+# 🎟️ Coupon Management System (FastAPI)
 
-•	Language: Python 3.14
+A complete REST API project built using **FastAPI**, **SQLite**, and **SQLAlchemy**.  
+This application allows you to **create, read, update, delete, and fetch the best coupon** based on maximum discount.
 
-•	Framework: FastAPI
+This project follows industry-level folder structuring with `routers`, `schemas`, `models`, and `database` modules.
 
-•	Data Validation: Pydantic
+---
 
-•	Server: Uvicorn (ASGI server)
-________________________________________
-**How to Run**
+## 🚀 Features
 
-Prerequisites
+- Create a new coupon  
+- Get all coupons  
+- Get a coupon by ID  
+- Update a coupon  
+- Delete a coupon  
+- Fetch the *best coupon* (max discount)
+- SQLite local database support  
+- Clean & modular FastAPI structure  
 
-•	Python 3.14 installed
+---
 
-•	pip available
-________________________________________
-**Setup Steps**
+## 🛠️ Tech Stack
 
-1. Clone the repository
-git clone <your-repo-url>
-cd coupon-management
+- **Python**  
+- **FastAPI**  
+- **SQLite**  
+- **SQLAlchemy**  
+- **Pydantic**  
+- **Uvicorn**  
 
-3. Install dependencies
-pip install fastapi uvicorn pydantic
+---
 
-5. Start the service
+## 📂 Folder Structure
+
+```
+Coupon-Management/
+│── main.py
+│
+├── app/
+│   ├── database/
+│   │    ├── __init__.py
+│   │    └── db.py
+│   │
+│   ├── models/
+│   │    ├── __init__.py
+│   │    └── coupon_model.py
+│   │
+│   ├── schemas/
+│   │    ├── __init__.py
+│   │    └── coupon_schema.py
+│   │
+│   ├── routers/
+│        ├── __init__.py
+│        └── coupon_router.py
+│
+└── README.md
+```
+
+---
+
+## ▶️ How to Run This Project
+
+### **1️⃣ Clone the Repository**
+```bash
+git clone <your-github-repo-url>
+```
+
+### **2️⃣ Go Inside Project Folder**
+```bash
+cd Coupon-Management
+```
+
+### **3️⃣ Install Dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+### **4️⃣ Start the Server**
+```bash
 uvicorn main:app --reload
+```
 
-7. Open API Docs
-Open browser:
+### **5️⃣ Open Swagger Documentation**
+```
 http://127.0.0.1:8000/docs
-________________________________________
-**Available Endpoints**
+```
 
-•	POST /create-coupon → Create a new coupon
+---
 
-•	GET /coupons → List all stored coupons
+## 🧪 API Endpoints
 
-•	POST /best-coupon → Returns the best applicable coupon
-________________________________________
-**How to Run Tests**
+### ➤ **Create Coupon**
+```
+POST /coupons/
+```
+Example Body:
+```json
+{
+  "code": "DIWALI50",
+  "discount": 50,
+  "is_active": true
+}
+```
 
-1. Navigate to project folder
-cd coupon-management
+---
 
-3. Run all tests
-pytest
+### ➤ **Get All Coupons**
+```
+GET /coupons/
+```
 
-4. For detailed output
-pytest -v
-________________________________________
-**AI Usage Note**
+---
 
-AI (ChatGPT) was used only for guidance in:
+### ➤ **Get Coupon By ID**
+```
+GET /coupons/{coupon_id}
+```
 
-•	Planning the project structure
+---
 
-•	Designing APIs
+### ➤ **Update Coupon**
+```
+PUT /coupons/{coupon_id}
+```
 
-•	Understanding eligibility rules
+---
 
-•	Writing README content
+### ➤ **Delete Coupon**
+```
+DELETE /coupons/{coupon_id}
+```
 
-**Example prompts used**
+---
 
-•	“Help me design a coupon management system API in FastAPI”
+### ➤ **Get Best Coupon**
+```
+GET /coupons/best
+```
 
-•	“Generate sample README for a coupon management project”
+---
 
-•	“Explain best coupon selection logic in a coupon system”
-________________________________________
-**Additional Notes**
+## 🗄️ Database Structure (SQLite)
 
-•	Uses in-memory storage (no real database)
+**Table Name:** `coupons`
 
-•	Best coupon selection logic:
+| Column      | Type      | Description           |
+|-------------|-----------|-----------------------|
+| id          | Integer   | Primary Key           |
+| code        | Text      | Unique coupon code    |
+| discount    | Integer   | Discount percentage   |
+| is_active   | Boolean   | Coupon status         |
 
-1.	Highest discount
-   
-2.	Earliest expiry
-   
-3.	Lexicographically smallest code
-   
-•	Optional eligibility attributes are ignored if not provided
+---
 
-•	Required demo login (must exist in deployed version):
+## 📸 Screenshots
 
-o	Email: hire-me@anshumat.org
+### ▶ Swagger UI
+(Add your swagger screenshot here)
+```
+![Swagger Screenshot](images/swagger.png)
+```
 
-o	Password: HireMe@2025!
+### ▶ SQLite Database Table
+(Add your DB screenshot here)
+```
+![Database Screenshot](images/database.png)
+```
+
+---
+
+## 📝 Conclusion
+
+This project is part of an internship assignment and demonstrates  
+**API development, database integration, folder structuring, and documentation skills** using FastAPI.
+
+---
+
+## 🔮 Future Improvements
+
+- JWT Authentication  
+- Pagination  
+- Search coupons  
+- Coupon expiry date  
+- React frontend integration  
+
+---
+
+## 👩‍💻 Author
+
+**Parul Gautam**  
+FastAPI Developer • Backend Enthusiast 🚀
+
+
 
 
